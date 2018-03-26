@@ -2,8 +2,8 @@
 # Author: Edoardo Pasca
 # Author: Benjamin A Thomas
 # Author: Kris Thielemans
-# Copyright 2017 University College London
-# Copyright 2017 Science Technology Facilities Council
+# Copyright 2017-2018 University College London
+# Copyright 2017-2018 Science Technology Facilities Council
 #
 # This file is part of the CCP PETMR Synergistic Image Reconstruction Framework (SIRF) SuperBuild.
 #
@@ -116,11 +116,11 @@ if (DEVEL_BUILD)
   set(DEFAULT_glog_TAG v035)
 
 else()
-  set(DEFAULT_SIRF_TAG v1.0.0-rc.3)
+  set(DEFAULT_SIRF_TAG v1.0.0)
 
   ## STIR
   set(DEFAULT_STIR_URL https://github.com/UCL/STIR )
-  set(DEFAULT_STIR_TAG 36200d37f83a9487a6eb3929b007967907910948 )
+  set(DEFAULT_STIR_TAG 5710d438090a972bd7b0636ff6de5315519b78e9 )
 
   ## Gadgetron
   set(DEFAULT_Gadgetron_URL https://github.com/gadgetron/gadgetron )
