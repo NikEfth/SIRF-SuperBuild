@@ -269,7 +269,9 @@ install:
        cmake $BUILD_FLAGS $EXTRA_BUILD_FLAGS .
        # Job may timeout (>50min) if no ccache, otherwise should be <1min:
        make
+       echo "RB: im here1"
        mv INSTALL/share/gadgetron/config/gadgetron.xml.example INSTALL/share/gadgetron/config/gadgetron.xml 2>/dev/null
+       echo "RB: im here2"
      ) || travis_terminate 1
      source $PWD/INSTALL/bin/env_ccppetmr.sh
    fi
@@ -280,7 +282,9 @@ script:
      # run tests within the container
      $DCC run --rm sirf /bin/bash --login -c '/devel/test.sh 1'
    else
+     echo "RB: im here3"
      ./INSTALL/bin/gadgetron >& gadgetron.log&
+     echo "RB: im here4"
      # print for debugging
      cat builds/SIRF/build/CMakeCache.txt
      ctest --output-on-failure; test_fail=$?
