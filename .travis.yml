@@ -48,7 +48,7 @@ matrix:
  - os: osx
    python: 2.7
    # +boost -hdf5 -swig
-   env: EXTRA_BUILD_FLAGS="-DUSE_SYSTEM_Boost=ON -DUSE_SYSTEM_HDF5=OFF -DUSE_SYSTEM_SWIG=OFF" MATRIX_EVAL="CC=gcc CXX=g++" PYMVER=2
+   env: EXTRA_BUILD_FLAGS="-DBUILD_GADGETRON=OFF -DUSE_SYSTEM_Boost=ON -DUSE_SYSTEM_HDF5=OFF -DUSE_SYSTEM_SWIG=OFF" MATRIX_EVAL="CC=gcc CXX=g++" PYMVER=2
  # - os: osx
  #   # +boost +fftw3 -hdf5 -swig
  #   python: 3
@@ -186,8 +186,6 @@ before_install:
        #tar xzf cmake-*.tar.gz
        #mv cmake-*/CMake.app/Contents/* cmake
        #export PATH="$PWD/cmake/bin:$PATH"
-       # Boost 1.69 not working with gadgetron
-       EXTRA_BUILD_FLAGS="$EXTRA_BUILD_FLAGS -DBUILD_GADGETRON=OFF"
      )
    elif [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
      PY_EXE=python$PYMVER
