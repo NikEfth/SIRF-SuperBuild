@@ -120,8 +120,8 @@ if (DEVEL_BUILD)
 
   set (DEFAULT_SIRF_TAG origin/master)
   ## STIR
-  set(DEFAULT_STIR_URL https://github.com/UCL/STIR )
-  set(DEFAULT_STIR_TAG origin/master)
+  set(DEFAULT_STIR_URL https://github.com/NikEfth/STIR )
+  set(DEFAULT_STIR_TAG origin/Scatter_simulation)
 
   ## siemens_to_ismrmrd
   set(DEFAULT_siemens_to_ismrmrd_URL https://github.com/ismrmrd/siemens_to_ismrmrd )
